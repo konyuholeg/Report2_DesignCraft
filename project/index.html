@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesignCraft - Курси з дизайну</title>
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/buttons.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/sections.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
+  <link rel="stylesheet" href="styles/utilities.css" />
+</head>
+<body>
+
+  <div class="mobile-menu__overlay" id="menuOverlay"></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__logo">Design<span>Craft</span></a>
+        <nav class="header__nav" aria-label="Головна навігація">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#courses" class="header__nav-link">Курси</a></li>
+            <li class="header__nav-item"><a href="#teachers" class="header__nav-link">Викладачі</a></li>
+            <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Відгуки</a></li>
+            <li class="header__nav-item"><a href="#questions" class="header__nav-link">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Перемикач теми" title="Змінити тему">
+            <span class="theme-toggle__knob">☀️</span>
+          </button>
+          <button class="btn btn--primary" id="headerEnrollBtn">Записатись</button>
+        </div>
+        <button class="header__burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Мобільна навігація">
+    <button class="mobile-menu__close" id="menuClose" aria-label="Закрити меню">✕</button>
+    <ul class="mobile-menu__list">
+      <li><a href="#courses" class="mobile-menu__link">Курси</a></li>
+      <li><a href="#teachers" class="mobile-menu__link">Викладачі</a></li>
+      <li><a href="#testimonials" class="mobile-menu__link">Відгуки</a></li>
+      <li><a href="#questions" class="mobile-menu__link">FAQ</a></li>
+    </ul>
+    <button class="btn btn--primary" id="mobileEnrollBtn">Записатись на курс</button>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container" style="display: grid; grid-template-columns: inherit; gap: inherit; align-items: center; width: 100%;">
+        <div class="hero__content">
+          <p class="hero__label">Онлайн-школа дизайну</p>
+          <h1 class="hero__title">Навчись створювати<br><em>красивий</em> дизайн</h1>
+          <p class="hero__subtitle">
+            Від основ до портфоліо - практичні курси від провідних дизайнерів України. Старт уже цього місяця.
+          </p>
+          <div class="hero__cta">
+            <button class="btn btn--primary" id="heroEnrollBtn">
+              Обрати курс <span class="btn__icon">→</span>
+            </button>
+            <a href="#courses" class="btn btn--outline">Переглянути програму</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="hero__stat-value">4 200+</div>
+              <div class="hero__stat-label">студентів навчаються</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-value">38</div>
+              <div class="hero__stat-label">курсів доступно</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-value">96%</div>
+              <div class="hero__stat-label">задоволених студентів</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero__visual">
+        </div>
+      </div>
+    </section>
+
+    <section class="section courses" id="courses">
+      <div class="container">
+        <div class="section__header anim-fade-up">
+          <p class="section__label">Напрямки навчання</p>
+          <h2 class="section__title">Наші Курси</h2>
+          <p class="section__subtitle">Оберіть свій шлях у дизайні. Програми адаптовані під сучасні вимоги IT-ринку.</p>
+        </div>
+        
+        <div class="courses__grid anim-fade-up anim-delay-1">
+          <div class="card card--featured">
+            <div class="card__image card__image--1"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop" alt="UI/UX Design"></div>
+            <div class="card__right">
+              <div class="card__body">
+                <div class="card__badge card__badge--popular">Популярний</div>
+                <p class="card__tag">Професія</p>
+                <h3 class="card__title">UI/UX Designer з нуля до PRO</h3>
+                <p class="card__desc">Комплексна програма створення інтерфейсів для веб-сайтів та мобільних додатків. Проектування UX, UI-кіти, Figma та робота з клієнтами.</p>
+                <div class="card__meta">
+                  <div class="card__meta-item">4 місяці</div>
+                  <div class="card__meta-item">32 модулі</div>
+                </div>
+              </div>
+              <div class="card__footer">
+                <div class="card__price">12 500 ₴</div>
+                <a href="#" class="card__enroll">Детальніше →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image card__image--2"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop" alt="Mobile App Design"></div>
+            <div class="card__body">
+              <p class="card__tag">Курс</p>
+              <h3 class="card__title">Mobile App Design</h3>
+              <p class="card__desc">Спеціалізований курс по iOS та Android гайдлайнах (Material Design & Human Interface Guidelines).</p>
+              <div class="card__meta">
+                <div class="card__meta-item">2 місяці</div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price">6 200 ₴</div>
+              <a href="#" class="card__enroll">Детальніше →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image card__image--3"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop" alt="Graphic Design"></div>
+            <div class="card__body">
+              <p class="card__tag">Курс</p>
+              <h3 class="card__title">Graphic Design Essentials</h3>
+              <p class="card__desc">Основи композиції, колористики, типографіки та створення унікального фірмового стилю бренда.</p>
+              <div class="card__meta">
+                <div class="card__meta-item">2.5 місяці</div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price">7 800 ₴</div>
+              <a href="#" class="card__enroll">Детальніше →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image card__image--4"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&auto=format&fit=crop" alt="Motion Design"></div>
+            <div class="card__body">
+              <p class="card__tag">Курс</p>
+              <h3 class="card__title">Motion Design & Animation</h3>
+              <p class="card__desc">Оживляйте інтерфейси та створюйте ефектні промо-відео в After Effects та Figma Smart Animate.</p>
+              <div class="card__meta">
+                <div class="card__meta-item">3 місяці</div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price">9 000 ₴</div>
+              <a href="#" class="card__enroll">Детальніше →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image card__image--5"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop" alt="Typography"></div>
+            <div class="card__body">
+              <p class="card__tag">Курс</p>
+              <h3 class="card__title">Typography & Layout</h3>
+              <p class="card__desc">Глибоке занурення в роботу зі шрифтами, модульними сітками та складною журнальною версткою.</p>
+              <div class="card__meta">
+                <div class="card__meta-item">1.5 місяці</div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price">4 500 ₴</div>
+              <a href="#" class="card__enroll">Детальніше →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image card__image--6"><img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=800&auto=format&fit=crop" alt="Figma"></div>
+            <div class="card__body">
+              <p class="card__tag">Вступ</p>
+              <h3 class="card__title">Вступ до Figma та UI/UX</h3>
+              <p class="card__desc">Безкоштовний міні-курс для знайомства з професією. Вивчіть базові інструменти програми Figma за тиждень.</p>
+              <div class="card__meta">
+                <div class="card__meta-item">1 тиждень</div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price">0 ₴</div>
+              <a href="#" class="card__enroll">Почати →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section__header anim-fade-up">
+          <p class="section__label">Історії успіху</p>
+          <h2 class="section__title">Відгуки випускників</h2>
+          <p class="section__subtitle">Студенти діляться своїми результатами, емоціями та процесом зміни кар'єри.</p>
+        </div>
+
+        <div class="splide anim-fade-up anim-delay-1" id="testimonialSlider" role="group" aria-label="Відгуки студентів">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__stars">★★★★★</div>
+                  <p class="testimonial-card__text">
+                  Неймовірний курс! До цього намагалась вчити Figma сама, але постійно кидала. На курсі отримала чітку систему, фідбек менторів та круті роботи в портфоліо. Уже знайшла перше замовлення на фрілансі!
+                  </p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #d4541a, #b8431a);">МК</div>
+                    <div>
+                      <div class="testimonial-card__name">Марія Ковальчук</div>
+                      <div class="testimonial-card__role">Випускниця UI/UX PRO, зараз Junior UI/UX</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__stars">★★★★★</div>
+                  <p class="testimonial-card__text">
+                  Дуже сподобався акцент на UX-дослідженнях. Ми не просто малювали красиві картинки, а розбирались, як користувач взаємодіє з продуктом. Дякую кураторам за конструктивну критику домашніх завдань!
+                  </p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #2b4d3e, #1e3a2d);">ОП</div>
+                    <div>
+                      <div class="testimonial-card__name">Олександр Петренко</div>
+                      <div class="testimonial-card__role">Випускник Mobile App Design, Product Designer у Startup</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__stars">★★★★★</div>
+                  <p class="testimonial-card__text">
+                  Я прийшов з абсолютно іншої сфери (маркетинг). Курс дав мені міцну базу. Окрема подяка за модуль про працевлаштування - підготовка резюме, оформлення Behance та симуляція співбесіди дуууже допомогли.
+                  </p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #5a6e8a, #3d5068);">ДЛ</div>
+                    <div>
+                      <div class="testimonial-card__name">Дмитро Левченко</div>
+                      <div class="testimonial-card__role">Випускник UI/UX PRO, Web Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teachers" id="teachers">
+      <div class="container">
+        <div class="section__header anim-fade-up">
+          <p class="section__label">Експерти індустрії</p>
+          <h2 class="section__title">Наші викладачі</h2>
+          <p class="section__subtitle">Практикуючі дизайнери з досвідом роботи в українських та міжнародних продуктових IT-компаніях.</p>
+        </div>
+
+        <div class="teachers__grid anim-fade-up anim-delay-1">
+          <div class="teacher-card">
+            <div class="teacher-card__photo" style="background: linear-gradient(135deg, #d4541a, #b8431a);">АК</div>
+            <h3 class="teacher-card__name">Артем Кравченко</h3>
+
+            <p class="teacher-card__bio">8+ років у сфері. Створював великі корпоративні екосистеми та фінтех-сервіси для ринку США.</p>
+          </div>
+          <div class="teacher-card">
+            <div class="teacher-card__photo" style="background: linear-gradient(135deg, #2b4d3e, #1e3a2d);">ОШ</div>
+            <h3 class="teacher-card__name">Олена Шевченко</h3>
+
+            <p class="teacher-card__bio">Спеціалізується на мобільних додатках та дизайні інтерфейсів для екосистеми Apple.</p>
+          </div>
+          <div class="teacher-card">
+            <div class="teacher-card__photo" style="background: linear-gradient(135deg, #5a6e8a, #3d5068);">ІВ</div>
+            <h3 class="teacher-card__name">Ігор Волошин</h3>
+
+            <p class="teacher-card__bio">Робить так, щоб інтерфейси рухалися стильно й плавно. Співпрацював із відомими брендами.</p>
+          </div>
+          <div class="teacher-card">
+            <div class="teacher-card__photo" style="background: linear-gradient(135deg, #8a5a7a, #6b3d5c);">НБ</div>
+            <h3 class="teacher-card__name">Наталія Бойко</h3>
+
+            <p class="teacher-card__bio">Експерт із брендингу, айдентики та пакування. Навчить вас заробляти на міжнародних біржах.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section questions" id="questions">
+      <div class="container">
+        <div class="section__header anim-fade-up">
+          <p class="section__label">Відповіді на питання</p>
+          <h2 class="section__title">Часті Запитання</h2>
+          <p class="section__subtitle">Не знайшли потрібної інформації? Ознайомтеся з найпопулярнішими питаннями наших майбутніх студентів.</p>
+        </div>
+
+        <div class="questions__list anim-fade-up anim-delay-1" style="margin: 0 auto;">
+          <div class="questions__item">
+            <button class="questions__question" aria-expanded="true">
+              <span>Чи підходить курс для повних новачків без досвіду малювання?</span>
+            </button>
+            <div class="questions__answer" aria-hidden="false">
+              <div class="questions__answer-inner">
+                Так, абсолютно! Для UI/UX дизайну вміння малювати від руки не є обов'язковим. Ми вчимо логіки, роботи з інструментами, композиції та типографіки з самого нуля. Головне - ваше бажання вчитися та аналітичне мислення.
+              </div>
+            </div>
+          </div>
+
+          <div class="questions__item">
+            <button class="questions__question" aria-expanded="true">
+              <span>Який комп'ютер потрібен для навчання та роботи з Figma?</span>
+            </button>
+            <div class="questions__answer" aria-hidden="false">
+              <div class="questions__answer-inner">
+                Figma - це хмарний інструмент, який працює прямо в браузері або через десктопний додаток. Вам підійде будь-який сучасний ноутбук чи ПК (Windows або macOS) із щонайменше 8 ГБ оперативної пам'яті та стабільним інтернетом.
+              </div>
+            </div>
+          </div>
+
+          <div class="questions__item">
+            <button class="questions__question" aria-expanded="true">
+              <span>Чи допомагаєте ви з працевлаштуванням після випуску?</span>
+            </button>
+            <div class="questions__answer" aria-hidden="false">
+              <div class="questions__answer-inner">
+                Ми допомагаємо оформити портфоліо на Behance та LinkedIn, вчимо проходити співбесіди та складати резюме. Кращих студентів ми рекомендуємо компаніям-партнерам на позиції стажерів/джуніорів.
+              </div>
+            </div>
+          </div>
+
+          <div class="questions__item">
+            <button class="questions__question" aria-expanded="true">
+              <span>Чи можна поєднувати навчання з основною роботою або університетом?</span>
+            </button>
+            <div class="questions__answer" aria-hidden="false">
+              <div class="questions__answer-inner">
+                Усі лекції проходять ввечері онлайн і зберігаються в записі в особистому кабінеті. Вам потрібно виділяти близько 6-8 годин на тиждень для перегляду матеріалів та виконання домашніх практичних завдань у зручний для вас час.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-section__title">Готові розпочати кар'єру дизайнера?</h2>
+        <p class="cta-section__subtitle">Залиште заявку на безкоштовну консультацію, і ми допоможемо обрати найкращий курс.</p>
+        <button class="btn btn--primary" id="ctaEnrollBtn">Залишити заявку</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">Design<span>Craft</span></a>
+          <p class="footer__desc">Сучасна онлайн-освіта для майбутніх лідерів цифрового дизайну. Навчаємо практиці, створюємо ком'юніті.</p>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Навігація</h4>
+          <ul class="footer__links">
+            <li><a href="#courses" class="footer__link">Курси</a></li>
+            <li><a href="#teachers" class="footer__link">Викладачі</a></li>
+            <li><a href="#testimonials" class="footer__link">Відгуки</a></li>
+            <li><a href="#questions" class="footer__link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Контакти</h4>
+          <ul class="footer__links">
+            <li><span class="footer__link">hello@designcraft.ua</span></li>
+            <li><span class="footer__link">+38 (044) 123-45-67</span></li>
+            <li><span class="footer__link">Київ, Україна</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Соцмережі</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 DesignCraft Школа дизайну. Усі права захищено.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="enrollModal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__window">
+      <button class="modal__close" id="modalCloseBtn" aria-label="Закрити модальне вікно">✕</button>
+      <p class="modal__label">Реєстрація</p>
+      <h3 class="modal__title">Почати навчання</h3>
+      <p class="modal__subtitle">Залиште свої контакти, і наш менеджер зв'яжеться з вами для підтвердження реєстрації на курс.</p>
+      
+      <form class="form" id="enrollForm" novalidate>
+        <div class="form__group">
+          <label for="formName" class="form__label">Ваше ім'я</label>
+          <input type="text" id="formName" class="form__input" placeholder="Іван Мазепа" required />
+          <span class="form__error" id="errorName">Будь ласка, вкажіть ваше ім'я</span>
+        </div>
+        <div class="form__group">
+          <label for="formEmail" class="form__label">Email</label>
+          <input type="email" id="formEmail" class="form__input" placeholder="ivan@example.com" required />
+          <span class="form__error" id="errorEmail">Введіть коректну електронну адресу</span>
+        </div>
+        <div class="form__group">
+          <label for="formCourse" class="form__label">Оберіть курс</label>
+          <select id="formCourse" class="form__select">
+            <option value="uiux">UI/UX Designer з нуля до PRO</option>
+            <option value="mobile">Mobile App Design</option>
+            <option value="graphic">Graphic Design Essentials</option>
+            <option value="motion">Motion Design & Animation</option>
+            <option value="typography">Typography & Layout</option>
+            <option value="free">Вступ до Figma (Безкоштовно)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary" style="justify-content: center; margin-top: var(--space-md);">
+          Надіслати заявку
+        </button>
+      </form>
+      <div class="form__success" id="formSuccessMessage">
+        🎉 Дякуємо! Вашу заявку успішно прийнято. Менеджер зателефонує вам найближчим часом.
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-bar cookie-bar--hidden" id="cookieBar">
+    <p class="cookie-bar__text">
+      Ми використовуємо файли cookie для покращення роботи нашого сайту. Продовжуючи перегляд, ви погоджуєтесь з нашою <a href="#">Політикою конфіденційності</a>.
+    </p>
+    <div class="cookie-bar__actions">
+      <button class="cookie-bar__accept" id="cookieAccept">Погодитись</button>
+      <button class="cookie-bar__decline" id="cookieDecline">Відхилити</button>
+    </div>
+  </div>
+
+  <button class="go-top" id="goTopBtn" aria-label="Вгору" title="Повернутися на початок">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="scripts/main.js" type="module"></script>
+
+</body>
+</html>

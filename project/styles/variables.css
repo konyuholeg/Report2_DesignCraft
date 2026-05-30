@@ -1,0 +1,53 @@
+:root {
+  --color-bg: #f5f1eb;
+  --color-bg-alt: #ede8e0;
+  --color-surface: #fff;
+  --color-text: #1a1208;
+  --color-text-muted: #6b5e47;
+  --color-accent: #d4541a;
+  --color-accent-hover: #b8431200;
+  --color-accent-2: #2b4d3e;
+  --color-border: #d8cfc3;
+  --color-header-bg: rgba(245,241,235,0.92);
+  --color-card-bg: #fff;
+  --color-cookie-bg: #1a1208;
+  --color-cookie-text: #f5f1eb;
+
+  --font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-2xl: 120px;
+
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 4px 24px rgba(26,18,8,0.08);
+  --shadow-modal: 0 20px 60px rgba(26,18,8,0.22);
+
+  --transition-fast: 0.18s ease;
+  --transition-mid: 0.35s cubic-bezier(.4,0,.2,1);
+
+  --header-height: 72px;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f0c08;
+  --color-bg-alt: #1a1510;
+  --color-surface: #1e1912;
+  --color-text: #f0e8d8;
+  --color-text-muted: #a89880;
+  --color-accent: #f07040;
+  --color-accent-2: #5a9e88;
+  --color-border: #2e2820;
+  --color-header-bg: rgba(15,12,8,0.92);
+  --color-card-bg: #1e1912;
+  --color-cookie-bg: #f0e8d8;
+  --color-cookie-text: #1a1208;
+}
