@@ -154,3 +154,14 @@
   transition: color var(--transition-fast);
 }
 .mobile-menu__link:hover { color: var(--color-accent); }
+
+@media (max-width: 768px) {
+  .header__burger {
+    display: flex;
+    margin-left: auto;
+  }
+  .header__nav,
+  .header__actions {
+    display: none;
+  }
+}
