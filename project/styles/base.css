@@ -49,3 +49,11 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 700; }
   color: var(--color-text-muted);
   max-width: 560px;
 }
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}

@@ -24,6 +24,9 @@
   font-size: 1.5rem;
   color: var(--color-text);
   flex-shrink: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 .header__logo span { color: var(--color-accent); }
 .header__nav { margin-left: auto; }

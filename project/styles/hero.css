@@ -1,12 +1,8 @@
 .hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding-top: var(--header-height);
+    padding-top: var(--header-height);
   gap: var(--space-xl);
   position: relative;
-  overflow: hidden;
 }
 .hero::before {
   content: '';
@@ -71,77 +67,3 @@
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
-
-
-.hero__visual {
-  position: relative;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero__shape {
-  position: absolute;
-  width: 480px; height: 520px;
-  background: var(--color-bg-alt);
-  border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%;
-  border: 1px solid var(--color-border);
-}
-.hero__image-card {
-  position: relative;
-  z-index: 2;
-  width: 360px;
-  background: var(--color-card-bg);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--color-border);
-}
-.hero__image-placeholder {
-  height: 260px;
-  background: linear-gradient(135deg, #d4541a22 0%, #2b4d3e22 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-}
-.hero__image-info {
-  padding: var(--space-lg);
-}
-.hero__image-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: var(--space-sm);
-}
-.hero__image-title {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-}
-.hero__image-meta {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-
-
-
-.hero__badge {
-  position: absolute;
-  z-index: 3;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 12px 18px;
-  box-shadow: var(--shadow-card);
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-.hero__badge--1 { bottom: 120px; left: 10px; }
-.hero__badge--2 { top: 120px; right: 10px; }
