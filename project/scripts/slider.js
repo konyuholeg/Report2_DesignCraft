@@ -1,5 +1,5 @@
 export function initSlider() {
-  if (!document.getElementById('testimonialSlider')) return;
+  if (!document.querySelector('#testimonialSlider')) return;
 
   new Splide('#testimonialSlider', {
     type       : 'loop',

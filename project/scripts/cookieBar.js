@@ -1,5 +1,5 @@
 export function initCookieBar() {
-  const cookieBar = document.getElementById('cookieBar');
+  const cookieBar = document.querySelector('#cookieBar');
 
   if (!localStorage.getItem('cookieConsent')) {
     setTimeout(function () { cookieBar.classList.remove('cookie-bar--hidden'); }, 1000);
@@ -12,10 +12,10 @@ export function initCookieBar() {
     cookieBar.classList.add('cookie-bar--hidden');
   }
 
-  document.getElementById('cookieAccept').addEventListener('click', function () {
+  document.querySelector('#cookieAccept').addEventListener('click', function () {
     hideCookieBar('accepted');
   });
-  document.getElementById('cookieDecline').addEventListener('click', function () {
+  document.querySelector('#cookieDecline').addEventListener('click', function () {
     hideCookieBar('declined');
   });
 }

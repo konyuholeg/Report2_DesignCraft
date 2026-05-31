@@ -1,8 +1,8 @@
 export function initMobileMenu() {
-  const burgerBtn   = document.getElementById('burgerBtn');
-  const mobileMenu  = document.getElementById('mobileMenu');
-  const menuClose   = document.getElementById('menuClose');
-  const menuOverlay = document.getElementById('menuOverlay');
+  const burgerBtn   = document.querySelector('#burgerBtn');
+  const mobileMenu  = document.querySelector('#mobileMenu');
+  const menuClose   = document.querySelector('#menuClose');
+  const menuOverlay = document.querySelector('#menuOverlay');
 
   function openMenu() {
     mobileMenu.classList.add('mobile-menu--open');

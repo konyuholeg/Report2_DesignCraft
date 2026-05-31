@@ -1,5 +1,5 @@
 export function initTheme() {
-  const themeToggle = document.getElementById('themeToggle');
+  const themeToggle = document.querySelector('#themeToggle');
   const htmlEl      = document.documentElement;
 
   function setTheme(theme) {

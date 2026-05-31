@@ -1,8 +1,8 @@
 export function initModal() {
-  const modal        = document.getElementById('enrollModal');
-  const modalOverlay = document.getElementById('modalOverlay');
-  const form         = document.getElementById('enrollForm');
-  const formSuccess  = document.getElementById('formSuccessMessage');
+  const modal        = document.querySelector('#enrollModal');
+  const modalOverlay = document.querySelector('#modalOverlay');
+  const form         = document.querySelector('#enrollForm');
+  const formSuccess  = document.querySelector('#formSuccessMessage');
 
   function openModal() {
     modal.classList.add('modal--open');
@@ -15,27 +15,32 @@ export function initModal() {
     resetForm();
   }
 
-  // Відкриваємо модалку з будь-якої кнопки "Записатись"
   ['headerEnrollBtn', 'mobileEnrollBtn', 'heroEnrollBtn', 'ctaEnrollBtn'].forEach(function (id) {
-    const btn = document.getElementById(id);
+    const btn = document.querySelector('#' + id);
     if (btn) btn.addEventListener('click', openModal);
   });
 
-  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  document.querySelectorAll('.card__enroll').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  document.querySelector('#modalCloseBtn').addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', closeModal);
 
-  // Валідація та відправка форми
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const nameInput  = document.getElementById('formName');
-    const emailInput = document.getElementById('formEmail');
+    const nameInput  = document.querySelector('#formName');
+    const emailInput = document.querySelector('#formEmail');
 
     const nameOk  = nameInput.value.trim() !== '';
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
 
-    setFieldError(nameInput,  document.getElementById('errorName'),  !nameOk);
-    setFieldError(emailInput, document.getElementById('errorEmail'), !emailOk);
+    setFieldError(nameInput,  document.querySelector('#errorName'),  !nameOk);
+    setFieldError(emailInput, document.querySelector('#errorEmail'), !emailOk);
 
     if (nameOk && emailOk) {
       form.style.display = 'none';
@@ -53,7 +58,7 @@ export function initModal() {
     form.reset();
     form.style.display = 'flex';
     formSuccess.classList.remove('form__success--visible');
-    setFieldError(document.getElementById('formName'),  document.getElementById('errorName'),  false);
-    setFieldError(document.getElementById('formEmail'), document.getElementById('errorEmail'), false);
+    setFieldError(document.querySelector('#formName'),  document.querySelector('#errorName'),  false);
+    setFieldError(document.querySelector('#formEmail'), document.querySelector('#errorEmail'), false);
   }
 }

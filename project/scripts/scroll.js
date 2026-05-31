@@ -1,6 +1,6 @@
 export function initScroll() {
-  const header   = document.getElementById('header');
-  const goTopBtn = document.getElementById('goTopBtn');
+  const header   = document.querySelector('#header');
+  const goTopBtn = document.querySelector('#goTopBtn');
 
   if (!header || !goTopBtn) return;
 
