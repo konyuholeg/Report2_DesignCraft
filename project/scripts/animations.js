@@ -1,14 +1,21 @@
 export function initAnimations() {
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('anim--visible');
-        observer.unobserve(entry.target);
+
+  const elements = document.querySelectorAll('.anim-fade-up, .anim-fade-left, .anim-fade-right');
+
+  function isVisible(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight * 0.9;
+  }
+
+  function checkElements() {
+    elements.forEach(function(el) {
+      if (isVisible(el)) {
+        el.classList.add('anim--visible');
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }
 
-  document.querySelectorAll('.anim-fade-up, .anim-fade-left, .anim-fade-right').forEach(function (el) {
-    observer.observe(el);
-  });
+  checkElements();
+  window.addEventListener('scroll', checkElements);
+
 }
